@@ -10,7 +10,7 @@ import Settings from './components/Settings';
 import HelpDocs from './components/HelpDocs';
 import { ShieldCheck, ArrowRight, Lock, EyeOff, UserCheck, ShieldAlert, Globe, FileText, Search, LayoutDashboard } from 'lucide-react';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 export default function App() {
   const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('spoof_user') || 'null'));
